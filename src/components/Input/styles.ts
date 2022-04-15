@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
 
     &:focus-within {
       label {
-        transform: translateY(${convertToRem(12)});
+        transform: translateY(${convertToRem(12)}) scale(0.8);
       }
 
       border: ${convertToRem(1)} solid ${theme.colors.primary.Primary400};
@@ -58,14 +58,14 @@ export const Wrapper = styled.div`
 
       color: ${theme.colors.neutrals.grey.Grey600};
 
-      transform: translateY(${convertToRem(24)});
+      transform: translateY(${convertToRem(24)}) scale(1);
       transform-origin: top left;
       
       transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
       pointer-events: none;
 
       &.filled {
-        transform: translateY(${convertToRem(12)});
+        transform: translateY(${convertToRem(12)}) scale(0.8);
       }
     }
 

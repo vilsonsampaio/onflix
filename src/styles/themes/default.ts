@@ -172,12 +172,14 @@ export default {
         font-size: ${convertToRem(14)};
         line-height: ${convertToRem(24)};
         letter-spacing: 0.04rem;
+        text-transform: uppercase;
       `,
       small: () => css`
         font-weight: 700;
         font-size: ${convertToRem(12)};
         line-height: ${convertToRem(16)};
         letter-spacing: 0.04rem;
+        text-transform: uppercase;
       `,
     },
     link: {
