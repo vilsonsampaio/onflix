@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 import { convertToRem } from '@utils/convertToRem';
 
@@ -9,16 +9,18 @@ const loading = keyframes`
 `;
 
 export const Wrapper = styled.span<{ color: string; }>`
-  display: flex;
+  ${({ color, theme }) => css`
+    display: flex;
 
-  width: ${convertToRem(30)};
-  height: ${convertToRem(30)};
+    width: ${convertToRem(30)};
+    height: ${convertToRem(30)};
 
-  background-color: transparent;
+    background-color: transparent;
 
-  border: solid ${convertToRem(3)} ${({ color, theme }) => color || theme.colors.primary.Primary500};
-  border-top-color: transparent;
-  border-radius: 50%;
+    border: solid ${convertToRem(3)} ${color || theme.colors.primary.Primary500};
+    border-top-color: transparent;
+    border-radius: 50%;
 
-  animation: ${loading} 0.7s infinite linear;
+    animation: ${loading} 0.7s infinite linear;
+  `};
 `;

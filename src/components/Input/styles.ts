@@ -15,17 +15,19 @@ export const Wrapper = styled.div`
 
     padding: 0 ${convertToRem(16)};
 
-    border: ${convertToRem(1)} solid ${theme.colors.neutrals.grey.Grey700};
+    border: ${convertToRem(2)} solid ${theme.colors.neutrals.grey.Grey700};
     border-radius: ${convertToRem(12)};
     
     transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 
     &:focus-within {
       label {
+        color: ${theme.colors.neutrals.grey.Grey400};
+        
         transform: translateY(${convertToRem(12)}) scale(0.8);
       }
 
-      border: ${convertToRem(1)} solid ${theme.colors.primary.Primary400};
+      border: ${convertToRem(2)} solid ${theme.colors.primary.Primary500};
     }
 
     .input-container {
@@ -65,6 +67,8 @@ export const Wrapper = styled.div`
       pointer-events: none;
 
       &.filled {
+        color: ${theme.colors.neutrals.grey.Grey400};
+
         transform: translateY(${convertToRem(12)}) scale(0.8);
       }
     }
