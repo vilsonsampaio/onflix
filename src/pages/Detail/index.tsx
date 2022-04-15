@@ -5,9 +5,12 @@ import { Container } from "./styles";
 export function Detail() {
   return (
     <Container>
-      <h1>Detail page</h1>
+      <div className="container">
+        <h1>Detail page</h1>
+        
+        <Link to="/">Go to home page</Link>
+      </div>
 
-      <Link to="/">Go to home page</Link>
     </Container>
   );
 }
