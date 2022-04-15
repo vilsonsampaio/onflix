@@ -1,5 +1,6 @@
-import { convertToRem } from "@utils/convertToRem";
 import styled, { css } from "styled-components";
+
+import { convertToRem } from "@utils/convertToRem";
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -36,6 +37,8 @@ export const Wrapper = styled.div`
     > svg {
       width: auto;
       height: ${convertToRem(24)};
+
+      color: ${theme.colors.neutrals.grey.Grey300};
 
       &:first-child {
         margin-right: ${convertToRem(16)};

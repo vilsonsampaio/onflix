@@ -1,14 +1,10 @@
-import { useState } from "react";
-
 import { InputProps } from "./Input";
 
 import { Wrapper } from "./styles";
 
-export function Input(props: InputProps) {
-  const { label, leftIcon, rightIcon, type, id } = props;
-  
-  const [value, setValue] = useState('');
-  
+export function Input({ label, leftIcon, rightIcon, type, id, value, ...props } : InputProps) {
+  const labelClass = !!value ? 'filled' : '';
+
   return (
     <Wrapper>
       {leftIcon}
@@ -16,13 +12,12 @@ export function Input(props: InputProps) {
       <div className="input-container">
         <input 
           type={type || 'text'} 
-          id={id} 
-          value={value}
-          onChange={e => setValue(e.target.value)}
+          id={id}
+          value={value} 
           {...props} 
         />
 
-        <label htmlFor={id} className={value && 'filled'}>{label}</label>
+        <label htmlFor={id} className={labelClass}>{label}</label>
       </div>
 
       {rightIcon}
