@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { convertToRem } from '../utils/convertToRem';
+import { convertToRem } from '@utils/convertToRem';
 
 export default createGlobalStyle`
   * {
