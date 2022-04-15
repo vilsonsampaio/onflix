@@ -1,26 +1,31 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { OnFlix } from "@assets/images";
+import { OnFlix, HeartLine, HeartFill } from "@assets/images";
 
 import { Container, Wrapper } from "./styles";
 
 export function Header() {
+  const [favorites, setFavorites] = useState<string[]>([]);
+
   return (
     <Wrapper>
       <Container className="container">
-        <OnFlix className="logo" />
+        <Link to="/" className="logo">
+          <OnFlix />
+        </Link>
 
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
+        <button onClick={() => setFavorites([...favorites, 'id'])}>
+          {favorites.length > 0 
+            ? <HeartFill /> 
+            : <HeartLine />
+          }
 
-            <li>
-              <Link to="/detalhes">Detalhes</Link>
-            </li>
-          </ul>
-        </nav>
+          {favorites.length > 0 
+            ? <span className="count">{favorites.length}</span> 
+            : null
+          }
+        </button>
       </Container>
     </Wrapper>
   );

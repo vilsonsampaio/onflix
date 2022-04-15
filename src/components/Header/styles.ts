@@ -1,38 +1,84 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import chroma from "chroma-js";
 
 import { convertToRem } from "@utils/convertToRem";
 
 export const Wrapper = styled.div`
-  width: 100vw;
-  height: ${convertToRem(80)};
+  ${({ theme }) => css`
+    width: 100vw;
+    height: ${convertToRem(80)};
 
-  background-color: ${({ theme }) => chroma(theme.colors.neutrals.grey.Grey900).alpha(0.8).css()};
+    background-color: ${chroma(theme.colors.neutrals.grey.Grey900).alpha(0.98).css()};
+  `};
 `;
 
 export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .logo {
-    width: auto;
-    height: ${convertToRem(40)};
-  }
-
-  ul {
+  ${({ theme }) => css`
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    li {
-      &:not(:first-child) {
-        margin-left: ${convertToRem(16)};
+    .logo svg {
+      width: auto;
+      height: ${convertToRem(40)};
+    }
+
+    button {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: ${convertToRem(4)};
+
+      background: none;
+      border: 0;
+
+      svg {
+        width: auto;
+        height: ${convertToRem(28)};
+      }
+
+      .count {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: ${convertToRem(15)};
+        height: ${convertToRem(15)};
+
+        font-weight: 700;
+        font-size: ${convertToRem(10)};
+        line-height: 1;
+
+        background-color: ${theme.colors.primary.Primary500};
+        color: ${theme.colors.neutrals.white.White100};
+
+        border-radius: 50%;
       }
     }
 
-    a {
-      ${({ theme }) => theme.fonts.link.regular()};
+    ul {
+      display: flex;
 
-      padding: ${convertToRem(12)} ${convertToRem(16)};
+      li {
+        &:not(:first-child) {
+          margin-left: ${convertToRem(16)};
+        }
+      }
+
+      a {
+        color: ${theme.colors.neutrals.grey.Grey200};
+
+        ${theme.fonts.link.regular};
+
+        padding: ${convertToRem(12)} ${convertToRem(16)};
+      }
     }
-  }
+  `};
 `;
