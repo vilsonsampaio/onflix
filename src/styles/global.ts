@@ -41,7 +41,7 @@ export default createGlobalStyle`
     font-weight: 600;
   }
   
-  input, button, a {
+  button, a {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
