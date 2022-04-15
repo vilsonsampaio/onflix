@@ -1,0 +1,1 @@
+export { ReactComponent as OnFlix } from './logo.svg';  

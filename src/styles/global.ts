@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import backgroundSvg from '@assets/images/background.svg';
+
 import { convertToRem } from '@utils/convertToRem';
 
 export default createGlobalStyle`
@@ -11,7 +13,11 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${({ theme }) => theme.colors.neutrals.grey.Grey900};
+    background-color: ${({ theme }) => theme.colors.neutrals.grey.Grey900};
+    background-image: url(${backgroundSvg});
+    background-position: top left;
+    background-size: cover auto;
+    background-repeat: repeat;
   }
 
   body, input, button, a {
@@ -39,6 +45,10 @@ export default createGlobalStyle`
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  ul {
+    list-style-type: none;
   }
 
   .container {
