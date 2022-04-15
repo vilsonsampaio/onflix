@@ -15,7 +15,7 @@ export const Favorite = styled.button`
 
     padding: ${convertToRem(6)};
 
-    background-color: ${theme.colors.neutrals.white.White10};
+    background-color: ${theme.colors.neutrals.black.Black50};
     color: ${theme.colors.helpers.error.Error500};
 
     backdrop-filter: blur(${convertToRem(8)});
@@ -26,7 +26,7 @@ export const Favorite = styled.button`
     transition: all 0.4s ease;
 
     &:hover {
-      background-color: ${theme.colors.neutrals.white.White20};
+      background-color: ${theme.colors.neutrals.black.Black75};
     }
   `}
 `;
@@ -81,7 +81,6 @@ export const Poster = styled.div`
 
     &:hover > img {
       transform: scale(1.05);
-      filter: brightness(0.6);
     }
   `}
 `;
@@ -100,8 +99,8 @@ export const Rating = styled.span`
 
     padding: ${convertToRem(4)} ${convertToRem(8)};
 
-    background-color: ${theme.colors.neutrals.white.White10};
-    color: ${theme.colors.helpers.warning.Warning400};
+    background-color: ${theme.colors.neutrals.black.Black65};
+    color: ${theme.colors.helpers.warning.Warning500};
 
     ${theme.fonts.body.regular};
 

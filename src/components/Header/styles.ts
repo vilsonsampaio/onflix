@@ -3,12 +3,21 @@ import chroma from "chroma-js";
 
 import { convertToRem } from "@utils/convertToRem";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.header`
   ${({ theme }) => css`
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
     width: 100vw;
     height: ${convertToRem(80)};
 
-    background-color: ${chroma(theme.colors.neutrals.grey.Grey900).alpha(0.98).css()};
+    background-color: ${chroma(theme.colors.neutrals.grey.Grey900).alpha(0.8).css()};
+
+    backdrop-filter: blur(${convertToRem(40)});
+
+    z-index: 99;
   `};
 `;
 
@@ -37,7 +46,7 @@ export const Container = styled.div`
 
       svg {
         width: auto;
-        height: ${convertToRem(28)};
+        height: ${convertToRem(32)};
       }
 
       .count {

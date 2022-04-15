@@ -5,18 +5,22 @@ import { Home } from '@pages/Home';
 
 import { Header } from '@components/Header';
 
-import { Wrapper } from './styles';
+import { Main, Wrapper } from './styles';
 
 export function GlobalRoutes() {
   return (
     <Wrapper>
       <Header />
 
-      <Routes>
-        <Route path='/' element={<Home />} />
+      <Main>
+        <Routes>
+          <Route path='/' element={<Home />} />
 
-        <Route path=':id/' element={<Detail />} />
-      </Routes>
+          <Route path='movie/:id/' element={<Detail />} />
+          
+          <Route path='*' element={(<h1>Rota nao encontrada</h1>)} />
+        </Routes>
+      </Main>
     </Wrapper>
   );
 }
