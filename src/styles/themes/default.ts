@@ -43,6 +43,19 @@ export default {
         Warning800: '#66451D', 
         Warning900: '#33230F', 
       },
+
+      error: {
+        Error50: '#FFECEC',
+        Error100: '#FFDFDF',
+        Error200: '#FFC0C0',
+        Error300: '#FFA0A0',
+        Error400: '#FF8181',
+        Error500: '#FF6161',
+        Error600: '#CC4E4E',
+        Error700: '#993A3A',
+        Error800: '#662727', 
+        Error900: '#331313', 
+      },
     },
 
     neutrals: {

@@ -12,6 +12,14 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    overflow-x: hidden;
+  }
+
+  html, body, #root {
+    min-height: 100vh;
+  }
+
   body {
     background-color: ${({ theme }) => theme.colors.neutrals.grey.Grey900};
     background-image: url(${backgroundSvg});
@@ -31,10 +39,6 @@ export default createGlobalStyle`
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  html, body, #root {
-    min-height: 100vh;
   }
   
   h1, h2, h3, h4, h5, h6, strong {
