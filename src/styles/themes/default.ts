@@ -59,6 +59,17 @@ export default {
         Grey900: '#121829', 
       },
 
+      white: {
+        White10: '#FFFFFF1A',
+        White20: '#FFFFFF33',
+        White30: '#FFFFFF4D',
+        White40: '#FFFFFF66',
+        White50: '#FFFFFF80',
+        White65: '#FFFFFFA6',
+        White75: '#FFFFFFBF',
+        White100: '#FFFFFF' ,
+      },
+
       black: {
         Black10: '#0000001A',
         Black20: '#00000033',
