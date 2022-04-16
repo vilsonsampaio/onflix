@@ -27,6 +27,11 @@ export const Container = styled.div`
 
     height: initial;
 
+    > svg {
+      max-width: 100%;
+      height: auto;
+    }
+
     h1, p {
       max-width: ${convertToRem(590)};
     }
@@ -57,9 +62,8 @@ export const Container = styled.div`
 
     @media (max-width: 768px) {
       h1 {
-        ${theme.fonts.heading.two};
+        ${theme.fonts.heading.three};
       }
     }
-
   `}
 `;

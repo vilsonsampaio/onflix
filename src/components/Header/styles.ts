@@ -68,23 +68,5 @@ export const Container = styled.div`
         border-radius: 50%;
       }
     }
-
-    ul {
-      display: flex;
-
-      li {
-        &:not(:first-child) {
-          margin-left: ${convertToRem(16)};
-        }
-      }
-
-      a {
-        color: ${theme.colors.neutrals.grey.Grey200};
-
-        ${theme.fonts.link.regular};
-
-        padding: ${convertToRem(12)} ${convertToRem(16)};
-      }
-    }
   `};
 `;

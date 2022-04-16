@@ -42,6 +42,11 @@ export default createGlobalStyle`
       background-position: center -160px;
       background-size: cover;
       background-repeat: repeat;
+
+      // Keeping the width of the background image as original 
+      @media (max-width: 1440px) {
+        background-size: 1440px;
+      }
     }
 
     body, input, button, a {
