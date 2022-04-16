@@ -7,10 +7,13 @@ import { GlobalRoutes } from '@routes/GlobalRoutes';
 import defaultTheme from '@styles/themes/default';
 import 'react-toastify/dist/ReactToastify.css';
 import GlobalStyles from '@styles/global';
+import { ScrollToTop } from '@utils/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+      
       <ThemeProvider theme={defaultTheme}>
         <ToastContainer />
 

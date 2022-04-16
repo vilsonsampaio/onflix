@@ -6,6 +6,20 @@ import { convertToRem } from '@utils/convertToRem';
 
 export default createGlobalStyle`
   ${({ theme }) => css`
+    ::-webkit-scrollbar {
+      width: ${convertToRem(8)};
+    }
+
+    ::-webkit-scrollbar-track {
+      background: ${theme.colors.neutrals.grey.Grey900};
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: ${theme.colors.neutrals.grey.Grey800};
+
+      border-radius: ${convertToRem(8)};
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -60,7 +74,7 @@ export default createGlobalStyle`
       width: 100%;
       height: 100%;
       
-      max-width: 1170px;
+      max-width: 1120px;
 
       margin: 0 auto;
     }
