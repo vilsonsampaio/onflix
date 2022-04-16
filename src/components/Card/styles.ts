@@ -90,6 +90,22 @@ export const Poster = styled.div`
     &:hover > img {
       transform: scale(1.05);
     }
+
+    @media (max-width: 1024px) {
+      height: ${convertToRem(360)};
+    }
+
+    @media (max-width: 768px) {
+      height: ${convertToRem(400)};
+    }
+
+    @media (max-width: 560px) {
+      height: ${convertToRem(320)};
+    }
+
+    @media (max-width: 360px) {
+      height: ${convertToRem(400)};
+    }
   `}
 `;
 

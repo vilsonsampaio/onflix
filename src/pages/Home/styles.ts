@@ -10,7 +10,13 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  padding: ${convertToRem(80)} 0;
+  padding-top: ${convertToRem(80)};
+  padding-bottom: ${convertToRem(160)};
+
+  @media (max-width: 768px) {
+    padding-top: ${convertToRem(40)};
+    padding-bottom: ${convertToRem(80)};
+  }
 `;
 
 export const Title = styled.div`
@@ -21,6 +27,10 @@ export const Title = styled.div`
       color: ${theme.colors.neutrals.grey.Grey50};
 
       ${theme.fonts.heading.one};
+
+      @media (max-width: 768px) {
+        ${theme.fonts.heading.two};
+      }
     }
 
     p {
@@ -56,6 +66,20 @@ export const SearchContainer = styled.form`
     
     margin-left: ${convertToRem(16)};
   }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    
+    ${Input} {
+      width: 100%;
+      min-width: auto;
+    }
+
+    ${Button} {
+      margin-top: ${convertToRem(16)};
+      margin-left: 0;
+    }
+  }
 `;
 
 export const OnTrendingContainer = styled.section`
@@ -68,8 +92,6 @@ export const OnTrendingContainer = styled.section`
     margin-top: ${convertToRem(80)};
 
     .filters {
-      max-width: 100%;
-
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -96,6 +118,22 @@ export const OnTrendingContainer = styled.section`
           background-color: ${theme.colors.primary.Primary400};
           color: ${theme.colors.primary.Primary50};
         }
+
+      }
+      
+      @media (max-width: 360px) {
+        &, ul {
+          width: 100%;
+        }
+
+        li {
+          flex: 1;
+        }
+        
+        button {
+          width: 50%;
+          padding: ${convertToRem(8)} 0;
+        }
       }
     }
 
@@ -121,6 +159,18 @@ export const OnTrendingContainer = styled.section`
       width: 100%;
 
       margin-top: ${convertToRem(24)};
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 360px) {
+        grid-template-columns: 1fr;
+      }
     }
 
     > ${Button} {

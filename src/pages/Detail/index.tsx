@@ -132,18 +132,6 @@ export function Detail() {
 
               <div className="info-grid">
                 <div className="info-group">
-                  <span className="label">Status</span>
-                  <span className="value">{movie.status}</span>
-                </div>
-
-                <div className="info-group">
-                  <span className="label">Genres</span>
-                  <span className="value">{movie.genres.map(genre => genre.name).join(', ')}</span>
-                </div>
-              </div>
-
-              <div className="info-grid">
-                <div className="info-group">
                   <span className="label">Revenue</span>
                   <span className="value">{movie.revenue.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</span>
                 </div>
@@ -151,6 +139,18 @@ export function Detail() {
                 <div className="info-group">
                   <span className="label">Budget</span>
                   <span className="value">{movie.budget.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</span>
+                </div>
+              </div>
+
+              <div className="info-grid">
+                <div className="info-group">
+                  <span className="label">Status</span>
+                  <span className="value">{movie.status}</span>
+                </div>
+
+                <div className="info-group">
+                  <span className="label">Genres</span>
+                  <span className="value">{movie.genres.map(genre => genre.name).join(', ')}</span>
                 </div>
               </div>
 

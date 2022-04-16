@@ -30,7 +30,8 @@ export const Container = styled.div`
     align-items: flex-start;
     justify-content: flex-start;
 
-    padding: ${convertToRem(64)} 0 ${convertToRem(128)};
+    padding-top: ${convertToRem(64)};
+    padding-bottom: ${convertToRem(128)};
 
     height: initial;
 
@@ -64,6 +65,10 @@ export const Container = styled.div`
       color: ${theme.colors.neutrals.grey.Grey50};
 
       ${theme.fonts.heading.one};
+      
+      @media (max-width: 768px) {
+        ${theme.fonts.heading.two};
+      }
     }
 
     p {
@@ -82,6 +87,18 @@ export const Container = styled.div`
       width: 100%;
 
       margin-top: ${convertToRem(24)};
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 360px) {
+        grid-template-columns: 1fr;
+      }
     }
   `}
 `;

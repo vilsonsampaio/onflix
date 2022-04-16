@@ -91,7 +91,7 @@ export function Home() {
 
         <SearchContainer className="search" onSubmit={handleSearch}>
           <Input 
-            label="Search for Movies or TV Shows" 
+            label="Search for Movies" 
             leftIcon={<Search />} 
             value={search}
             onChange={e => setSearch(e.target.value)}

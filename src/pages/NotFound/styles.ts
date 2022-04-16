@@ -22,7 +22,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
 
-    padding: ${convertToRem(40)} 0;
+    padding-top: ${convertToRem(40)};
+    padding-bottom: ${convertToRem(80)};
 
     height: initial;
 
@@ -36,6 +37,8 @@ export const Container = styled.div`
       color: ${theme.colors.neutrals.grey.Grey50};
 
       ${theme.fonts.heading.two};
+
+      text-align: center;
     }
 
     p {
@@ -51,5 +54,12 @@ export const Container = styled.div`
     ${Button} {
       margin-top: ${convertToRem(24)};
     }
+
+    @media (max-width: 768px) {
+      h1 {
+        ${theme.fonts.heading.two};
+      }
+    }
+
   `}
 `;

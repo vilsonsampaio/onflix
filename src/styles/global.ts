@@ -29,6 +29,7 @@ export default createGlobalStyle`
 
     html {
       overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
     html, body, #root {
@@ -38,8 +39,8 @@ export default createGlobalStyle`
     body {
       background-color: ${theme.colors.neutrals.grey.Grey900};
       background-image: url(${backgroundImage});
-      background-position: top left;
-      background-size: cover auto;
+      background-position: center -160px;
+      background-size: cover;
       background-repeat: repeat;
     }
 
@@ -74,9 +75,31 @@ export default createGlobalStyle`
       width: 100%;
       height: 100%;
       
-      max-width: 1120px;
+      max-width: 1440px;
 
       margin: 0 auto;
+      padding-left: ${convertToRem(120)};
+      padding-right: ${convertToRem(120)};
+
+      @media (max-width: 1024px) {
+        padding-left: ${convertToRem(80)};
+        padding-right: ${convertToRem(80)};
+      }
+
+      @media (max-width: 768px) {
+        padding-left: ${convertToRem(40)};
+        padding-right: ${convertToRem(40)};
+      }
+
+      @media (max-width: 560px) {
+        padding-left: ${convertToRem(24)};
+        padding-right: ${convertToRem(24)};
+      }
+
+      @media (max-width: 360px) {
+        padding-left: ${convertToRem(16)};
+        padding-right: ${convertToRem(16)};
+      }
     }
   `};
 `

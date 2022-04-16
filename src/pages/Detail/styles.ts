@@ -21,6 +21,7 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   padding-top: ${convertToRem(40)};
+  padding-bottom: ${convertToRem(80)};
 `;
 
 export const MovieCover = styled.div`
@@ -43,6 +44,10 @@ export const MovieCover = styled.div`
 
       opacity: 0.6;
     }
+
+    @media (max-width: 768px) {
+      height: ${convertToRem(320)};
+    }
   `}
 `;
 
@@ -52,7 +57,11 @@ export const Content = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
 
-  padding: 0  ${convertToRem(80)};
+  padding: 0 ${convertToRem(80)};
+
+  @media (max-width: 1024px) {
+    padding: 0;
+  }
 `;
 
 export const Title = styled.div`
@@ -135,6 +144,14 @@ export const Title = styled.div`
 
       &.favorited {
         color: ${theme.colors.helpers.error.Error500};
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: ${convertToRem(32)};
+
+      h1 {
+        ${theme.fonts.heading.four};
       }
     }
   `};
@@ -234,6 +251,32 @@ export const MovieInfo = styled.div`
             position: absolute;
           }
         }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .poster {
+        max-width: ${convertToRem(432)};
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+
+      padding-top: ${convertToRem(40)};
+      padding-bottom: 0;
+
+      .details {
+        margin-left: 0;
+        margin-bottom: ${convertToRem(40)};
+
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .poster {
+        max-width: 100%;
       }
     }
   `}
