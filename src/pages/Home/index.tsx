@@ -1,18 +1,16 @@
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 
 import { Button } from "@components/Button";
-import { Input } from "@components/Input";
 import { Card } from "@components/Card";
 import { Loading } from "@components/Loading";
 
 import MoviesService, { Movie } from "@services/MoviesService";
 
-import { Search } from "@assets/images";
 
-import { Container, OnTrendingContainer, SearchContainer, Title, Wrapper } from "./styles";
+import { Container, OnTrendingContainer, Title, Wrapper } from "./styles";
 
 type Sort = 'popularity.desc' | 'revenue.desc';
 
@@ -24,20 +22,12 @@ export function Home() {
 
   const [selectedSort, setSelectedSort] = useState<Sort>('popularity.desc');
 
-  const [search, setSearch] = useState('');
-
   const [isLoading, setIsLoading] = useState(true);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   
   const [movies, setMovies] = useState<Movie[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [lastPage, setLastPage] = useState(1);
-
-  function handleSearch(e: FormEvent) {
-    e.preventDefault();
-
-    alert(JSON.stringify({ search }));
-  }
 
   useEffect(() => {
     async function getMovies(page: number, sortBy: Sort) {
@@ -86,19 +76,8 @@ export function Home() {
       <Container className="container">
         <Title>
           <h1>OnFlix</h1>
-          <p>Hello, welcome! OnFlix is a <span>platform for discovering and storing Movies and TV Shows</span>, rating them as favorites. We are like Goodreads, but focused on television productions.</p>
+          <p>OnFlix is a <span>platform for discovering and storing Movies and TV Shows</span>, rating them as favorites. We are like Goodreads, but focused on television productions.</p>
         </Title>
-
-        <SearchContainer className="search" onSubmit={handleSearch}>
-          <Input 
-            label="Search for Movies" 
-            leftIcon={<Search />} 
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          />
-
-          <Button type="submit" disabled={!search}>Search</Button>
-        </SearchContainer>
 
         <OnTrendingContainer>
           <nav className="filters">

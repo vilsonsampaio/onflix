@@ -64,7 +64,15 @@ export function Favorites() {
     );
   }
 
-  if (favoriteList.length <= 0) return <NotFound title="No favorited movies" description="There are no favorited movies. Go back to home and find one :)"/>
+  if (favoriteList.length <= 0) {
+    return (
+      <NotFound 
+        title="No favorited movies" 
+        description="There are no favorited movies. Go back to home and find one :)"
+      />
+    );
+  }
+  
   return (
     <Wrapper>
       <Container className="container">
