@@ -31,6 +31,19 @@ export default {
     },
     
     helpers: {
+      success: {
+        Success50: '#E1F9F2',
+        Success100: '#CDF5E9',
+        Success200: '#9BEBD3',
+        Success300: '#69E2BD',
+        Success400: '#37D8A7',
+        Success500: '#05CE91',
+        Success600: '#04A574',
+        Success700: '#037C57',
+        Success800: '#02523A', 
+        Success900: '#01291D', 
+      },
+
       warning: {
         Warning50: '#FFF5E9',
         Warning100: '#FFEFDB',

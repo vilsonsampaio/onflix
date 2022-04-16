@@ -3,3 +3,7 @@ export { ReactComponent as Search } from './search.svg';
 export { ReactComponent as Star } from './star.svg';  
 export { ReactComponent as HeartLine } from './heart-line.svg';  
 export { ReactComponent as HeartFill } from './heart-fill.svg';  
+export { ReactComponent as Arrow } from './arrow.svg';  
+export { ReactComponent as Plus } from './plus.svg';  
+export { ReactComponent as Minus } from './minus.svg';  
+export { ReactComponent as NotFoundIllustration } from './not-found-illustration.svg';  
