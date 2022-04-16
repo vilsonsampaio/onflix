@@ -2,6 +2,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { ToastContainer } from 'react-toastify';
 
+import { FavoriteListProvider } from '@contexts/favoriteList';
+
 import { GlobalRoutes } from '@routes/GlobalRoutes';
 
 import defaultTheme from '@styles/themes/default';
@@ -15,11 +17,13 @@ function App() {
       <ScrollToTop />
       
       <ThemeProvider theme={defaultTheme}>
-        <ToastContainer />
+        <FavoriteListProvider>
+            <ToastContainer />
 
-        <GlobalStyles /> 
+            <GlobalStyles /> 
 
-        <GlobalRoutes />
+            <GlobalRoutes />
+        </FavoriteListProvider>
       </ThemeProvider>
     </BrowserRouter>
   );
