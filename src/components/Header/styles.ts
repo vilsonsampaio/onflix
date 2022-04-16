@@ -32,7 +32,7 @@ export const Container = styled.div`
       height: ${convertToRem(40)};
     }
 
-    button {
+    .favorite {
       position: relative;
 
       display: flex;
@@ -40,9 +40,6 @@ export const Container = styled.div`
       justify-content: center;
 
       padding: ${convertToRem(4)};
-
-      background: none;
-      border: 0;
 
       svg {
         width: auto;

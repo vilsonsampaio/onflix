@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { toast } from "react-toastify";
+import { useFavoriteList } from "@contexts/favoriteList";
 
 import { Rating } from "@components/Rating";
 
@@ -11,30 +10,27 @@ import { CardProps } from "./Card";
 import { Favorite, Poster, Title, Wrapper } from "./styles";
 
 export function Card({ data, onClick, ...props }: CardProps) {
-  const [isFavorite, setIsFavorited] = useState(data.isFavorited || false);
+  const { checkIsFavorite, toggleFromFavoriteList } = useFavoriteList();
 
-  function toogleFavorite() {
-    setIsFavorited(!isFavorite);
-    toast.success(`Movie was successfully ${isFavorite ? 'unfavorited' : 'favorited'}`)
-  }
+  const isFavorite = checkIsFavorite(data.id);
 
   return (
     <Wrapper {...props}>
       <Poster>
         <img 
-          src={data.posterPath 
-            ? `https://image.tmdb.org/t/p/w500/${data.posterPath}` 
+          src={data.poster_path 
+            ? `https://image.tmdb.org/t/p/w500/${data.poster_path}` 
             : nullPoster
           } 
           alt={`Poster ${data.title}`}
           onClick={() => onClick()}
         />
 
-        <Rating rate={data.rating} aria-label="Rating" />
+        <Rating rate={data.vote_average} aria-label="Rating" />
 
         <Favorite 
           aria-label={isFavorite ? 'Unfavorite' : 'Favorite'} 
-          onClick={toogleFavorite}
+          onClick={() => toggleFromFavoriteList(data)}
         >
           {isFavorite ? <HeartFill /> : <HeartLine strokeWidth={2.25} />}
         </Favorite>

@@ -1,12 +1,8 @@
 import { HTMLAttributes } from "react";
 
+import { Movie } from "@services/MoviesService";
+
 export interface CardProps extends Omit<HTMLAttributes<HTMLDivElement>, "onClick"> {
-  data: {
-    id: number;
-    posterPath: string | null;
-    title: string;
-    rating: number;
-    isFavorited?: boolean;
-  };
+  data: Movie;
   onClick: () => any;
 }

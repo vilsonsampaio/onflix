@@ -1,12 +1,13 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+
+import { useFavoriteList } from "@contexts/favoriteList";
 
 import { OnFlix, HeartLine, HeartFill } from "@assets/images";
 
 import { Container, Wrapper } from "./styles";
 
 export function Header() {
-  const [favorites, setFavorites] = useState<string[]>([]);
+  const { favoriteList } = useFavoriteList();
 
   return (
     <Wrapper>
@@ -15,17 +16,14 @@ export function Header() {
           <OnFlix />
         </Link>
 
-        <button onClick={() => setFavorites([...favorites, 'id'])}>
-          {favorites.length > 0 
-            ? <HeartFill /> 
-            : <HeartLine />
-          }
+        <Link to='/favorites/' className="favorite">
+          {favoriteList.length > 0 ? <HeartFill /> : <HeartLine />}
 
-          {favorites.length > 0 
-            ? <span className="count">{favorites.length}</span> 
+          {favoriteList.length > 0 
+            ? <span className="count">{favoriteList.length}</span> 
             : null
           }
-        </button>
+        </Link>
       </Container>
     </Wrapper>
   );

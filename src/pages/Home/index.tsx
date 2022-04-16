@@ -133,13 +133,7 @@ export function Home() {
                 ? movies.map((movie, i) => (
                     <Card 
                       key={`${movie.id}--${i}`}
-                      data={{
-                        id: movie.id,
-                        title: movie.title,
-                        posterPath: movie.poster_path,
-                        rating: movie.vote_average,
-                        isFavorited: (i + 1) % 2 === 0
-                      }} 
+                      data={movie} 
                       onClick={() => navigate(`/movie/${movie.id}`)}
                     />
                 ))

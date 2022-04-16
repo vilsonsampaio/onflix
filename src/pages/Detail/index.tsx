@@ -3,6 +3,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 
+import { useFavoriteList } from "@contexts/favoriteList";
+
 import { NotFound } from "@pages/NotFound";
 
 import { Loading } from "@components/Loading";
@@ -20,10 +22,12 @@ export function Detail() {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  const { checkIsFavorite, toggleFromFavoriteList } = useFavoriteList();
+
+  const isFavorite = checkIsFavorite(Number(id));
+
   const [isLoading, setIsLoading] = useState(true);
   const [movie, setMovie] = useState<ListMovieById | null>(null);
-
-  const [isFavorited, setIsFavorited] = useState(false);
 
   const movieTrailer = movie?.videos.results.filter(movie => movie.site === 'YouTube' && movie.type === 'Trailer')[0] || null;
 
@@ -88,11 +92,11 @@ export function Detail() {
             <h1>{movie.title}</h1>
 
             <button 
-              className={`favorite ${!isFavorited ? 'favorited' : ''}`} 
-              onClick={() => setIsFavorited(!isFavorited)}
+              className={`favorite ${isFavorite ? 'favorited' : ''}`}
+              onClick={() => toggleFromFavoriteList(movie)}
             >
-              {isFavorited ? <Plus /> : <Minus />}
-              {isFavorited ? 'Add to favorites' : 'Remove from favorites'}
+              {isFavorite ? <Minus /> : <Plus />}
+              {isFavorite ? 'Remove from favorites' : 'Add to favorites'}
             </button>
           </Title>
 
