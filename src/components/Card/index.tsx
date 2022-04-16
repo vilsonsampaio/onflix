@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 
-import { HeartFill, HeartLine, Star } from "@assets/images";
+import { Rating } from "@components/Rating";
+
+import { HeartFill, HeartLine } from "@assets/images";
 import nullPoster from "@assets/images/null-poster.png";
 
 import { CardProps } from "./Card";
 
-import { Favorite, Poster, Rating, Title, Wrapper } from "./styles";
+import { Favorite, Poster, Title, Wrapper } from "./styles";
 
 export function Card({ data, onClick, ...props }: CardProps) {
   const [isFavorite, setIsFavorited] = useState(data.isFavorited || false);
@@ -28,10 +30,7 @@ export function Card({ data, onClick, ...props }: CardProps) {
           onClick={() => onClick()}
         />
 
-        <Rating aria-label="Rating">
-          <Star strokeWidth={2.25} />
-          {data.rating.toFixed(1)}
-        </Rating> 
+        <Rating rate={data.rating} aria-label="Rating" />
 
         <Favorite 
           aria-label={isFavorite ? 'Unfavorite' : 'Favorite'} 
