@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <img src="./.github/onflix.svg" title="OnFlix" height="60px">
+</h1>
+<p align="center">🎬 Plataforma para descoberta e gerenciamento de filmes favoritos.</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/vilsonsampaio/onflix.svg?color=5A4AF4">
 
-## Available Scripts
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/top/vilsonsampaio/onflix.svg?color=5A4AF4">
 
-In the project directory, you can run:
+  <a href="https://github.com/vilsonsampaio/onflix/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/vilsonsampaio/onflix.svg?color=5A4AF4">
+  </a>
 
-### `yarn start`
+  <a href="https://github.com/vilsonsampaio/">
+    <img alt="Author" src="https://img.shields.io/badge/author-Vilson%20Sampaio-5A4AF4">
+  </a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📌 Índice
 
-### `yarn test`
+- [📌 Índice](#-índice)
+- [📝 Sobre o projeto](#-sobre-o-projeto)
+- [✨ Features](#-features)
+- [👷 Instalação](#-instalação)
+- [📮 FAQ](#-faq)
+- [📕 Licença](#-licença)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## 📝 Sobre o projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+OnFlix é uma plataforma que permite a descoberta e gerenciamento de filmes, possibilitando categorizá-los como favoritos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Trata-se de um projeto de estudo destinado a colocar em prática meus conhecimentos obtidos ao longo da formação enquanto desenvolvedor front-end.
+  * **Status do projeto**: 🚧 Em construção.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## ✨ Features
+- [x] 📽 Filtragem dos filmes mais vendidos ou mais rentáveis, além das informações de um filme em específico.
+- [x] 💟 Gerenciamento de filmes favoritos.
+- [ ] 🔎 Busca de filmes.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 👷 Instalação
+1. Primeiro, é necessário que você tenha instalado o [NodeJS](https://nodejs.org/en/docs/) e o [Yarn](https://yarnpkg.com/getting-started) em seu computador.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Tendo os programas listados acima instalados, clone esse repositório: `git clone https://github.com/vilsonsampaio/onflix.git`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. Dentro do diretório do projeto, instale todas as dependências da aplicação: `yarn add`.
 
-## Learn More
+4. Clone o arquivo `.env.example` para configurar as variáveis de ambiente: `cp .env.example .env`. 
+   1. Será necessário ter uma conta no [The Movie Database](https://www.themoviedb.org/) para fornecimento da chave API para que seja possível realizar as requisições ao servidor do TMDB.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Execute a aplicação com o comando `yarn start`, e a plataforma já estará funcionado no endereço `http://localhost:3000/`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+## 📮 FAQ
+**Pergunta:** Quais foram as tecnologias utilizadas nesse projeto?
+
+**Resposta:** Esse projeto utilizou o [Create React App](https://create-react-app.dev/) como boilerplate do  [ReactJS](https://reactjs.org/) para criação da interface, juntamente com [Styled Components](https://styled-components.com/) para estilização dos componentes. Além disso, foi utilizado o [Axios](https://axios-http.com/) como cliente HTTP, [chroma.js](https://gka.github.io/chroma.js/) para manipulação das cores, e [React Toastify](https://fkhadra.github.io/react-toastify/introduction/) para exibição de mensagens ao usuário. Como IDE, foi utilizado o [Visual Studio Code](https://code.visualstudio.com/#alt-downloads).
+
+**Pergunta:** Quem desenhou as telas?
+
+**Resposta:** As telas da aplicação foram criadas por [Pramod Poudel](https://pramodpoudel.com.np/) e estão disponíveis no [Figma Community](https://www.figma.com/community/file/1054327700155381422).
+
+
+## 📕 Licença
+
+Desenvolvido em 2022.<br />
+Este projeto está licenciado sob a [MIT License](https://github.com/vilsonsampaio/mycontacts-api/blob/main/LICENSE).
+
+---
+
+<h4 align="center">
+  Feito com 💙 <a href="https://www.linkedin.com/in/vilsonsampaio/" target="_blank">Vilson Sampaio</a>
+</h4>

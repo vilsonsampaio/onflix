@@ -76,7 +76,7 @@ export function Home() {
       <Container className="container">
         <Title>
           <h1>OnFlix</h1>
-          <p>OnFlix is a <span>platform for discovering and storing Movies and TV Shows</span>, rating them as favorites. We are like Goodreads, but focused on television productions.</p>
+          <p>OnFlix is a <span>platform for discovering and storing Movies</span>, rating them as favorites. We are like Goodreads, but focused on television productions.</p>
         </Title>
 
         <OnTrendingContainer>
