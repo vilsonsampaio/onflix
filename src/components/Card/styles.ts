@@ -63,8 +63,7 @@ export const Poster = styled.div`
   ${({ theme }) => css`
     position: relative;
 
-    width: 100%;
-    height: ${convertToRem(400)};
+    padding-top: 150%; // Aspect Ratio 2:3
 
     background-color: ${theme.colors.neutrals.black.Black40};
 
@@ -73,6 +72,12 @@ export const Poster = styled.div`
     overflow: hidden;
 
     > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
       width: 100%;
       height: 100%;
 
@@ -89,22 +94,6 @@ export const Poster = styled.div`
 
     &:hover > img {
       transform: scale(1.05);
-    }
-
-    @media (max-width: 1024px) {
-      height: ${convertToRem(360)};
-    }
-
-    @media (max-width: 768px) {
-      height: ${convertToRem(400)};
-    }
-
-    @media (max-width: 560px) {
-      height: ${convertToRem(320)};
-    }
-
-    @media (max-width: 360px) {
-      height: ${convertToRem(400)};
     }
   `}
 `;
