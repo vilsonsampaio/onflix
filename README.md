@@ -33,13 +33,13 @@
 OnFlix é uma plataforma que permite a descoberta e gerenciamento de filmes, possibilitando categorizá-los como favoritos.
 
 Trata-se de um projeto de estudo destinado a colocar em prática meus conhecimentos obtidos ao longo da formação enquanto desenvolvedor front-end.
-  * **Status do projeto**: 🚧 Em construção.
+  * **Status do projeto**: ✅ Concluído.
 
 
 ## ✨ Features
 - [x] 📽 Filtragem dos filmes mais vendidos ou mais rentáveis, além das informações de um filme em específico.
 - [x] 💟 Gerenciamento de filmes favoritos.
-- [ ] 🔎 Busca de filmes.
+- [x] 🔎 Busca de filmes.
 
 
 ## 👷 Instalação
