@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="./.github/onflix.svg" title="OnFlix" height="60px">
 </h1>
-<p align="center">🎬 Plataforma para descoberta e gerenciamento de filmes favoritos.</p>
+<p align="center">🎬 Discover movies and rate your favorites.</p>
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/vilsonsampaio/onflix.svg?color=5A4AF4">
@@ -18,60 +18,78 @@
 </p>
 
 
-## 📌 Índice
+## 📌 Table of Content
 
-- [📌 Índice](#-índice)
-- [📝 Sobre o projeto](#-sobre-o-projeto)
+- [📌 Table of Content](#-table-of-content)
+- [📝 About the project](#-about-the-project)
 - [✨ Features](#-features)
-- [👷 Instalação](#-instalação)
+- [🖥 Screens](#-screens)
+- [👷 Installation](#-installation)
 - [📮 FAQ](#-faq)
-- [📕 Licença](#-licença)
+- [📕 License](#-license)
 
 
-## 📝 Sobre o projeto
+## 📝 About the project
 
-OnFlix é uma plataforma que permite a descoberta e gerenciamento de filmes, possibilitando categorizá-los como favoritos.
+OnFlix is a platform that allows the discovery and management of movies, categorizing them as favorites.
 
-Trata-se de um projeto de estudo destinado a colocar em prática meus conhecimentos obtidos ao longo da formação enquanto desenvolvedor front-end.
-  * **Status do projeto**: ✅ Concluído.
+This is a study project focused on putting into practice my knowledge obtained throughout my education as a Front-end Developer.
+  * **Status do projeto**: ✅ Done.
 
 
 ## ✨ Features
-- [x] 📽 Filtragem dos filmes mais vendidos ou mais rentáveis, além das informações de um filme em específico.
-- [x] 💟 Gerenciamento de filmes favoritos.
-- [x] 🔎 Busca de filmes.
+- [x] 📽 Filtering of the best selling or most profitable movies, plus information on a specific movie.
+- [x] 💟 Management of favorite movies.
+- [x] 🔎 Movie search.
 
 
-## 👷 Instalação
-1. Primeiro, é necessário que você tenha instalado o [NodeJS](https://nodejs.org/en/docs/) e o [Yarn](https://yarnpkg.com/getting-started) em seu computador.
+## 🖥 Screens
+**Home**
+![Home](./.github/home.png)
 
-2. Tendo os programas listados acima instalados, clone esse repositório: `git clone https://github.com/vilsonsampaio/onflix.git`.
+**Movie**
+![Movie](./.github/movie.png)
 
-3. Dentro do diretório do projeto, instale todas as dependências da aplicação: `yarn add`.
+**Search**
+![Search](./.github/search.png)
 
-4. Clone o arquivo `.env.example` para configurar as variáveis de ambiente: `cp .env.example .env`. 
-   1. Será necessário ter uma conta no [The Movie Database](https://www.themoviedb.org/) para fornecimento da chave API para que seja possível realizar as requisições ao servidor do TMDB.
+**Favorites**
+![Favorites](./.github/favorites.png)
 
-5. Execute a aplicação com o comando `yarn start`, e a plataforma já estará funcionado no endereço `http://localhost:3000/`.
+**Not Found**
+![Not Found](./.github/not-found.png)
+
+
+## 👷 Installation
+1. First, you need to have [NodeJS](https://nodejs.org/en/docs/) and [Yarn](https://yarnpkg.com/getting-started) installed on your computer.
+
+2. With the programs listed above installed, clone this repository: `git clone https://github.com/vilsonsampaio/onflix.git`.
+
+3. Inside the project directory, install all the application dependencies: `yarn add`.
+
+4. Clone the `.env.example` file to set the environment variables: `cp .env.example .env`. 
+   1. You will need an account at [The Movie Database](https://www.themoviedb.org/) to provide the API key so that you can make requests to the TMDB server.
+
+5. Run the application with `yarn start`, and the platform will be running at `http://localhost:3000/`.
 
 
 ## 📮 FAQ
-**Pergunta:** Quais foram as tecnologias utilizadas nesse projeto?
+**Question:** What technologies were used in this project?
 
-**Resposta:** Esse projeto utilizou o [Create React App](https://create-react-app.dev/) como boilerplate do  [ReactJS](https://reactjs.org/) para criação da interface, juntamente com [Styled Components](https://styled-components.com/) para estilização dos componentes. Além disso, foi utilizado o [Axios](https://axios-http.com/) como cliente HTTP, [chroma.js](https://gka.github.io/chroma.js/) para manipulação das cores, e [React Toastify](https://fkhadra.github.io/react-toastify/introduction/) para exibição de mensagens ao usuário. Como IDE, foi utilizado o [Visual Studio Code](https://code.visualstudio.com/#alt-downloads).
+**Answer:** This project used [Create React App](https://create-react-app.dev/) as a boilerplate for [ReactJS](https://reactjs.org/) to create the interface along with [Styled Components](https://styled-components.com/) for styling the components. Additionally, [Axios](https://axios-http.com/) was used as HTTP client, [chroma.js](https://gka.github.io/chroma.js/) for color manipulation, and [React Toastify](https://fkhadra.github.io/react-toastify/introduction/) for displaying messages to the user. As IDE, [Visual Studio Code](https://code.visualstudio.com/#alt-downloads) was used.
 
-**Pergunta:** Quem desenhou as telas?
+**Question**: Who designed the screens?
 
-**Resposta:** As telas da aplicação foram criadas por [Pramod Poudel](https://pramodpoudel.com.np/) e estão disponíveis no [Figma Community](https://www.figma.com/community/file/1054327700155381422).
+**Answer:** The application UI were created by [Pramod Poudel](https://pramodpoudel.com.np/) and are available at [Figma Community](https://www.figma.com/community/file/1054327700155381422).
 
 
-## 📕 Licença
+## 📕 License
 
-Desenvolvido em 2022.<br />
-Este projeto está licenciado sob a [MIT License](https://github.com/vilsonsampaio/mycontacts-api/blob/main/LICENSE).
+Developed in 2022.<br />
+This project is under the [MIT License](https://github.com/vilsonsampaio/onflix/blob/main/LICENSE).
 
 ---
 
 <h4 align="center">
-  Feito com 💙 <a href="https://www.linkedin.com/in/vilsonsampaio/" target="_blank">Vilson Sampaio</a>
+  Made with 💙 <a href="https://www.linkedin.com/in/vilsonsampaio/" target="_blank">Vilson Sampaio</a>
 </h4>
