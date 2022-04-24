@@ -1,16 +1,18 @@
-import { useEffect, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 
 import { Button } from "@components/Button";
 import { Card } from "@components/Card";
+import { Input } from "@components/Input";
 import { Loading } from "@components/Loading";
 
 import MoviesService, { Movie } from "@services/MoviesService";
 
+import { Search } from "@assets/images";
 
-import { Container, OnTrendingContainer, Title, Wrapper } from "./styles";
+import { Container, OnTrendingContainer, SearchContainer, Title, Wrapper } from "./styles";
 
 type Sort = 'popularity.desc' | 'revenue.desc';
 
@@ -20,6 +22,7 @@ export function Home() {
   const firstRender = useRef(true);
   const firstLoading = useRef(true);
 
+  const [search, setSearch] = useState('');
   const [selectedSort, setSelectedSort] = useState<Sort>('popularity.desc');
 
   const [isLoading, setIsLoading] = useState(true);
@@ -71,13 +74,30 @@ export function Home() {
     setIsLoading(true);
   }, [selectedSort]);
 
+  function handleSearch(e: FormEvent) {
+    e.preventDefault();
+
+    navigate({ pathname: "/search", search: `?q=${search}` });
+  }
+
   return (
     <Wrapper>
       <Container className="container">
         <Title>
           <h1>OnFlix</h1>
-          <p>OnFlix is a <span>platform for discovering and storing Movies</span>, rating them as favorites. We are like Goodreads, but focused on television productions.</p>
+          <p>OnFlix is a <span>platform for discovering and storing Movies</span>, rating them as favorites. Like Goodreads, but focused on television productions.</p>
         </Title>
+
+        <SearchContainer onSubmit={handleSearch}>
+          <Input 
+            label="Search for Movies" 
+            leftIcon={<Search />} 
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+          />
+
+          <Button type="submit" disabled={!search}>Search</Button>
+        </SearchContainer>
 
         <OnTrendingContainer>
           <nav className="filters">

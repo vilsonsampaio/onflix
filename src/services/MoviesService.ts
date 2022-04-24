@@ -42,6 +42,11 @@ export interface ListMovieById extends Movie {
   };
 }
 
+interface ListMoviesByQueryParams {
+  page: number;
+  query: string;
+};
+
 const [month, day, year] = new Date().toLocaleDateString('en-US').split('/');
 const maxReleaseDate = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
 
@@ -60,6 +65,15 @@ class MoviesService {
     return HttpClient.get<ListMovieById>(`/movie/${id}`, {
       params: {
         'append_to_response': 'videos',
+      }
+    });
+  }
+
+  async listMovieByQuery(params: ListMoviesByQueryParams) {
+    return HttpClient.get<ListMovies>('/search/movie', {
+      params: {
+        page: params.page,
+        query: params.query
       }
     });
   }

@@ -84,7 +84,7 @@ export function Favorites() {
 
         <h1>Favorites</h1>
 
-        <p>{favoriteList.length} items</p>
+        <p>{favoriteList.length} movies</p>
 
         <div className="favorites-container">
           {movies.map((movie, i) => (
